@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dvvj7bmv4jvot"]
+
+[ext_resource type="Script" uid="uid://cpo4ukp4k1eg0" path="res://addons/ez-tree-godot-port/ez_tree.gd" id="1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_te7ho"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_pcw0o"]
+sky_material = SubResource("ProceduralSkyMaterial_te7ho")
+
+[sub_resource type="Environment" id="Environment_0uvlh"]
+background_mode = 2
+sky = SubResource("Sky_pcw0o")
+glow_enabled = true
+
+[node name="EZTreeDemo" type="Node3D" unique_id=1023065787]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=557383643]
+environment = SubResource("Environment_0uvlh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=660752796]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="EZTree" type="Node3D" parent="." unique_id=892613677]
+script = ExtResource("1")
+rng_seed = 35733
+branch_angle = PackedFloat32Array(0, 54, 58, 32)
+branch_children = PackedInt32Array(6, 4, 3, 0)
+branch_gnarliness = PackedFloat32Array(0, -0.05, -0.08, 0.05)
+branch_length = PackedFloat32Array(9.31, 2.77, 3.1, 1.79)
+branch_radius = PackedFloat32Array(0.4, 0.9, 0.69, 1.19)
+branch_sections = PackedInt32Array(8, 6, 3, 1)
+branch_segments = PackedInt32Array(7, 5, 3, 3)
+branch_start = PackedFloat32Array(0, 0.49, 0.06, 0.12)
+branch_taper = PackedFloat32Array(0.73, 0.42, 0.69, 0.75)
+branch_twist = PackedFloat32Array(-0.23, 0.42, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1303266756]
+transform = Transform3D(1, 0, 0, 0, 0.97629595, 0.21643999, 0, -0.21643999, 0.97629595, 0, 10.2, 17.3)
+far = 500.0
