@@ -23,6 +23,12 @@ gives a different tree of the same character; the same seed always produces
 the same tree. Both deciduous and evergreen shapes are supported
 (**tree_type**).
 
+
+
+<img width="1280" height="761" alt="image" src="https://github.com/user-attachments/assets/29800ab4-2223-4ddf-83d8-0576f21f8f56" />
+
+
+
 From code:
 
 ```gdscript
